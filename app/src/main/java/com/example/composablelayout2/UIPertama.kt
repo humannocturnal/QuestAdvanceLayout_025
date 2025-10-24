@@ -60,7 +60,7 @@ fun ActivitasPertama(modifier: Modifier){
                     painter = gambar,
                     contentDescription = null,
                     modifier = Modifier
-                        .size(size = 200.dp)
+                        .size(size = 100.dp)
                         .padding(all = 5.dp)
                 )
                 Spacer(modifier = Modifier.width(width = 30.dp))
@@ -79,18 +79,18 @@ fun ActivitasPertama(modifier: Modifier){
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                ){
-                    Text(
-                        text = stringResource(id = R.string.copy),
-                        modifier = Modifier
-                            .align(Alignment.BottomCenter)
-                            .padding(bottom = 50.dp)
-                    )
-                }
             }
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ){
+            Text(
+                text = stringResource(id = R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
         }
     }
 }

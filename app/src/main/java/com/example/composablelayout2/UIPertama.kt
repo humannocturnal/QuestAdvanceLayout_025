@@ -1,7 +1,5 @@
 package com.example.composablelayout2
 
-import android.R.attr.fontWeight
-import android.R.attr.text
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column

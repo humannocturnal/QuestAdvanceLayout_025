@@ -2,6 +2,7 @@ package com.example.composablelayout2
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,9 +35,10 @@ fun ActivitasPertama(modifier: Modifier){
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5F5F5)) // 🌿 Tambahan ini
+            .background(Color(0xFFF5F5F5))
             .padding(top = 60.dp, start = 16.dp, end = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ){
         Text(
             text = stringResource( id = R.string.prodi),

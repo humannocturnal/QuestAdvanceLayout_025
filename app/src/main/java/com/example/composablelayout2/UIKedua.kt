@@ -69,7 +69,12 @@ fun ProfileScreen( modifier: Modifier = Modifier,
                 color = Color(0xFFB8C0CC),
                 fontSize = 13.sp
             )
-
+            Spacer(Modifier.height(8.dp))
+            Text(
+                text = "Saya seorang Back End Developer",
+                color = Color(0xFFE4E7EC),
+                fontSize = 14.sp
+            )
 
 
         }

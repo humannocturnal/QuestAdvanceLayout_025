@@ -3,11 +3,14 @@ package com.example.composablelayout2
 import android.R.attr.bottom
 import android.R.attr.contentDescription
 import android.R.attr.top
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -22,9 +25,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextPainter.paint
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -134,3 +141,36 @@ fun ProfileScreen( modifier: Modifier = Modifier,
         }
     }
 }
+
+@Composable
+private fun Avatar(modifier: Modifier = Modifier) {
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 20.dp)
+    ){
+        Image(
+            painter = painterResource(id = R.drawable.ryan),
+            contentDescription = "Foto Profil",
+            modifier = Modifier
+                .size(100.dp)
+                .clip(CircleShape)
+                .border(3.dp, Color.White, CircleShape),
+            contentScale = ContentScale.Crop,
+            alignment = Alignment.TopCenter
+        )
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

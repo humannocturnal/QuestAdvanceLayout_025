@@ -1,13 +1,13 @@
 package com.example.composablelayout2
 
-import android.R.attr.bottom
-import android.R.attr.contentDescription
-import android.R.attr.top
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -31,11 +31,9 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.TextPainter.paint
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import java.nio.file.WatchEvent
 
 @Composable
 fun ProfileScreen( modifier: Modifier = Modifier,
@@ -160,6 +158,29 @@ private fun Avatar(modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
             alignment = Alignment.TopCenter
         )
+    }
+}
+@Composable
+private fun SocialRow() {
+    Row (horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+        SocialDot("f", bg = Color(0xFF1877F2)) {}
+        SocialDot("G+", bg = Color(0xFFDB4437)) {}
+        SocialDot("t", bg = Color(0x03A9F4)) {}
+        SocialDot("in", bg = Color(0xFF0A66C2)) {}
+    }
+}
+
+@Composable
+private fun SocialDot(text: String, bg: Color, onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(36.dp)
+            .clip(CircleShape)
+            .background(bg.copy(alpha = 0.95f))
+            .clickable { onClick() },
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text, color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
     }
 }
 

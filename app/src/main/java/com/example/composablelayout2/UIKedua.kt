@@ -64,6 +64,13 @@ fun ProfileScreen( modifier: Modifier = Modifier,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.SemiBold
             )
+            Text(
+                text = "@Ryan Syaputra MA",
+                color = Color(0xFFB8C0CC),
+                fontSize = 13.sp
+            )
+
+
 
         }
     }

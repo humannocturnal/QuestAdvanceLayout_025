@@ -1,6 +1,7 @@
 package com.example.composablelayout2
 
 import android.R.attr.bottom
+import android.R.attr.contentDescription
 import android.R.attr.top
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,6 +13,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Security
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -74,6 +78,22 @@ fun ProfileScreen( modifier: Modifier = Modifier,
                 text = "Saya seorang Back End Developer",
                 color = Color(0xFFE4E7EC),
                 fontSize = 14.sp
+            )
+            Spacer(Modifier.height(24.dp))
+
+            // Kartu menu
+            SettingCard(
+                title = "Privacy",
+                subtitle = null,
+                leading = {
+                    Icon(
+                        Icons.Filled.Security,
+                        contentDescription = null,
+                        tint = Color(0xFF7CD6F9),
+                        modifier = Modifier.size(22.dp)
+                    )
+                },
+                onClick = onPrivacy
             )
 
 

@@ -16,6 +16,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Security
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -82,7 +83,6 @@ fun ProfileScreen( modifier: Modifier = Modifier,
             )
             Spacer(Modifier.height(24.dp))
 
-            // Kartu menu
             SettingCard(
                 title = "Privacy",
                 subtitle = null,
@@ -109,6 +109,27 @@ fun ProfileScreen( modifier: Modifier = Modifier,
                     )
                 },
                 onClick = onHistory
+            )
+            Spacer(Modifier.height(12.dp))
+            SettingCard(
+                title = "Pengaturan",
+                subtitle = null,
+                leading = {
+                    Icon(
+                        Icons.Filled.Settings,
+                        contentDescription = null,
+                        tint = Color(0xFFF3B46B),
+                        modifier = Modifier.size(22.dp)
+                    )
+                },
+                onClick = onSettings
+            )
+            Spacer(Modifier.weight(1f))
+
+            Text(
+                text = "© 2025 Ryan Syaputra Maulana Arsad",
+                color = Color(0xFF8C96A6),
+                fontSize = 12.sp
             )
         }
     }

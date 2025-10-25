@@ -5,7 +5,9 @@ import android.R.attr.top
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -48,6 +50,11 @@ fun ProfileScreen( modifier: Modifier = Modifier,
                     .size(96.dp)
                     .shadow(16.dp, CircleShape, clip = true)
             )
+            Spacer(Modifier.height(12.dp))
+
+            SocialRow()
+
+            Spacer(Modifier.height(12.dp))
         }
     }
 }

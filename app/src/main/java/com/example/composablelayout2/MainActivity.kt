@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposableLayout2Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ActivitasPertama(
+                    ProfileScreen(
                         modifier = Modifier.padding(innerPadding) // hormati insets Scaffold
                     )
                 }

@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Security
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -95,8 +96,20 @@ fun ProfileScreen( modifier: Modifier = Modifier,
                 },
                 onClick = onPrivacy
             )
-
-
+            Spacer(Modifier.height(12.dp))
+            SettingCard(
+                title = "Riwayat Transaksi",
+                subtitle = null,
+                leading = {
+                    Icon(
+                        Icons.Filled.History,
+                        contentDescription = null,
+                        tint = Color(0xFF9BA8FF),
+                        modifier = Modifier.size(22.dp)
+                    )
+                },
+                onClick = onHistory
+            )
         }
     }
 }
